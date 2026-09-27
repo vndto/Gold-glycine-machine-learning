@@ -18,7 +18,7 @@ Model-dependent analyses (feature importance, SHAP, and partial dependence plots
 | Microfluidic | Random Forest (RF)     |
 | Beaker      | XGBoost                 |
 
-[Reason for selection, e.g. "Each model was chosen because it gave the lowest NRMSE on the test set for that dataset."]
+Each model was selected because it gave the best predictive performance on its dataset, with the highest coefficient of determination (R²) and the lowest normalized root mean square error (NRMSE) among the four models tested (RF, SVM, GPR, and XGBoost).
 
 The analyses included are:
 
@@ -33,12 +33,3 @@ Pearson and Spearman correlation coefficients are calculated directly from the p
 1. **Pearson** — linear correlation between each input feature and the target
 2. **Spearman** — rank-based (monotonic) correlation, which is less sensitive to non-linearity and outliers
 
-## Usage
-
-Run each script from the repository root so the data file path resolves correctly, for example:
-
-```bash
-python "Analysis/[script name].py"
-```
-
-Results correspond to the interpretation figures in Chapter [X] of the thesis.
